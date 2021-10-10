@@ -9,12 +9,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.info.dgpaysmusicapi_v6.MyMediaPlayer;
+import com.info.dgpaysmusicapi_v6.mediaPlayer.MyMediaPlayer;
 import com.info.dgpaysmusicapi_v6.adapter.TrackAdapter;
-import com.info.dgpaysmusicapi_v6.databinding.ActivityPlaylistBinding;
 import com.info.dgpaysmusicapi_v6.databinding.ActivityTrackBinding;
 import com.info.dgpaysmusicapi_v6.model.Tracks;
-import com.info.dgpaysmusicapi_v6.view_model.TrackViewModel;
+import com.info.dgpaysmusicapi_v6.viewModel.TrackViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,7 +66,6 @@ public class TrackActivity extends AppCompatActivity implements TrackAdapter.Ite
 
     @Override
     public void onItemClicked(Tracks tracks) {
-        //Toast.makeText(this, tracks.getPreview()+"asdas", Toast.LENGTH_SHORT).show();
         if(music == null)  {
             music = tracks.getPreview();
             MyMediaPlayer.getMediaPlayerInstance().playAudioFile(this,music);

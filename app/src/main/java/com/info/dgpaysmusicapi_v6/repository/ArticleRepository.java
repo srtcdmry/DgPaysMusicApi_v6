@@ -17,11 +17,11 @@ import retrofit2.Response;
 public class ArticleRepository {
 
     private static final String TAG = ArticleRepository.class.getSimpleName();
-    private final ApiRequest apiRequest;
+    private  ApiRequest apiRequest;
 
     @Inject
-    public ArticleRepository(){
-        apiRequest = RetrofitRequest.getRetrofitInstance().create(ApiRequest.class);
+    public ArticleRepository(ApiRequest apiRequest){
+        this.apiRequest=apiRequest;
     }
 
     public LiveData<ArticleResponse> getDashBoardNews() {

@@ -17,11 +17,11 @@ import retrofit2.Response;
 public class PlaylistRepository {
 
     private static final String TAG = PlaylistRepository.class.getSimpleName();
-    private final ApiRequest apiRequest;
+    private  ApiRequest apiRequest;
 
     @Inject
-    public PlaylistRepository(){
-        apiRequest = RetrofitRequest.getRetrofitInstance().create(ApiRequest.class);
+    public PlaylistRepository(ApiRequest apiRequest){
+        this.apiRequest=apiRequest;
     }
 
     public LiveData<PlaylistResponse> PlaylistResponse() {

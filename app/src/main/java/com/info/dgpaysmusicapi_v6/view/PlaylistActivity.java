@@ -11,10 +11,9 @@ import android.view.View;
 
 import com.info.dgpaysmusicapi_v6.adapter.PlaylistAdapter;
 import com.info.dgpaysmusicapi_v6.constants.AppConstants;
-import com.info.dgpaysmusicapi_v6.databinding.ActivityAlbumBinding;
 import com.info.dgpaysmusicapi_v6.databinding.ActivityPlaylistBinding;
 import com.info.dgpaysmusicapi_v6.model.Playlist;
-import com.info.dgpaysmusicapi_v6.view_model.PlaylistViewModel;
+import com.info.dgpaysmusicapi_v6.viewModel.PlaylistViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,7 +66,6 @@ public class PlaylistActivity extends AppCompatActivity implements PlaylistAdapt
         String key = playlist.getTitle();
         String link = playlist.getLink();
         intent.putExtra("link",link);
-       // Toast.makeText(this, playlist.getTitle(), Toast.LENGTH_LONG).show();
         intent.putExtra("name", key);
         String picture = playlist.getPictureBig();
         intent.putExtra("picture", picture);

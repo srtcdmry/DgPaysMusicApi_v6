@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name="com.info.dgpaysmusicapi_v6.Application.MainApplication"
+        android:name="com.info.dgpaysmusicapi_v6.MainApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="DgPaysMusic"
@@ -29,7 +29,7 @@
             android:name="com.info.dgpaysmusicapi_v6.view.ArticleActivity"
             android:exported="true" />
         <activity
-            android:name="com.info.dgpaysmusicapi_v6.MainActivity"
+            android:name="com.info.dgpaysmusicapi_v6.ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

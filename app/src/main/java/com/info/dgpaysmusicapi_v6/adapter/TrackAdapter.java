@@ -46,7 +46,6 @@ public class TrackAdapter extends RecyclerView.Adapter<TrackAdapter.ViewHolder> 
         holder.title.setText(tracks.getTitle());
         holder.id.setText(tracks.artist.getName());
         String s = tracks.getDuration().toString();
-        //holder.duration.setText(tracks.getPreview());
         holder.bindItem(tracks);
 
 

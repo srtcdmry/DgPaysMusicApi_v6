@@ -29,7 +29,6 @@ public class PlayListArtistActivity extends AppCompatActivity {
         Glide.with(this)
                 .load(intent.getStringExtra("picture"))
                 .into(artistBinding.main8Picture);
-       // Toast.makeText(this, intent.getStringExtra("name"), Toast.LENGTH_SHORT).show();
         artistBinding.artistName.setText(intent.getStringExtra("name"));
         artistBinding.main8Tracks.setText(intent.getStringExtra("link"));
 
@@ -37,7 +36,6 @@ public class PlayListArtistActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent1 = new Intent(PlayListArtistActivity.this,TrackActivity.class);
-                //AppConstants.search = intent.getStringExtra("name");
                 AppConstants.search = artistBinding.artistName.getText().toString();
                 startActivity(intent1);
             }

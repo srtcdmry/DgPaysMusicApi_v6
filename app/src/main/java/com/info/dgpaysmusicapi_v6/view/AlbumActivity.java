@@ -12,7 +12,7 @@ import android.view.View;
 import com.info.dgpaysmusicapi_v6.adapter.AlbumAdapter;
 import com.info.dgpaysmusicapi_v6.databinding.ActivityAlbumBinding;
 import com.info.dgpaysmusicapi_v6.model.Album;
-import com.info.dgpaysmusicapi_v6.view_model.AlbumViewModel;
+import com.info.dgpaysmusicapi_v6.viewModel.AlbumViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,9 +67,6 @@ public class AlbumActivity extends AppCompatActivity implements AlbumAdapter.Ite
         String key = album.getTitle();
         String link = album.getLink();
         intent.putExtra("link",link);
-
-        //Toast.makeText(this, key, Toast.LENGTH_LONG).show();
-        //MainActivity.search = getTitle().toString();
         intent.putExtra("name", key);
         String picture = album.getCoverBig();
         intent.putExtra("picture", picture);

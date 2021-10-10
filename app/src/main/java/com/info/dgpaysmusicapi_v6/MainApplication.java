@@ -1,4 +1,4 @@
-package com.info.dgpaysmusicapi_v6.Application;
+package com.info.dgpaysmusicapi_v6;
 
 import android.app.Application;
 
@@ -6,6 +6,5 @@ import dagger.hilt.android.HiltAndroidApp;
 
 @HiltAndroidApp
 public class MainApplication extends Application {
-
 
 }

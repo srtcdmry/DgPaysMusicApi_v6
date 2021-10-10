@@ -1,4 +1,4 @@
-package com.info.dgpaysmusicapi_v6;
+package com.info.dgpaysmusicapi_v6.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.info.dgpaysmusicapi_v6.R;
 import com.info.dgpaysmusicapi_v6.constants.AppConstants;
 import com.info.dgpaysmusicapi_v6.databinding.ActivityMainBinding;
 import com.info.dgpaysmusicapi_v6.view.AlbumActivity;
@@ -72,47 +73,4 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
-        //  init();
-        //getArticles();
-
-//
-//    private void getArticles() {
-//
-//        articleViewModel.getBashboardNewsResponseLiveData().observe(this, articleResponse -> {
-//            if (articleResponse != null && articleResponse.getArticles() != null && !articleResponse.getArticles().isEmpty()) {
-//
-//                mainBind.progress_bar.setVisibility(View.GONE);
-//                List<Article> articleList = articleResponse.getArticles();
-//                articleArrayList.addAll(articleList);
-//                adapter.notifyDataSetChanged();
-//
-//            }
-//
-//        });
-//    }
-//
-//    private void init() {
-//        progress_bar = findViewById(R.id.progress_bar);
-//        recycler_View = findViewById(R.id.recycler_view);
-//        layoutManager = new LinearLayoutManager(MainActivity.this);
-//
-//        recycler_View.setLayoutManager(layoutManager);
-//        recycler_View.setHasFixedSize(true);
-//        adapter = new ArticleAdapter(MainActivity.this, articleArrayList);
-//        recycler_View.setAdapter(adapter);
-//        articleViewModel = ViewModelProviders.of(this).get(ArticleViewModel.class);
-
-//        articleViewModel.getBashboardNewsResponseLiveData().observe(this,articleResponse ->{
-//            if(articleResponse != null && articleResponse.getArticles()!=null && !articleResponse.getArticles().isEmpty()) {
-//
-//                progress_bar.setVisibility(View.GONE);
-//                List<Article> articleList = articleResponse.getArticles();
-//                articleArrayList.addAll(articleList);
-//                adapter.notifyDataSetChanged();
-//
-//            }
-//
-//        } );
-
-
 

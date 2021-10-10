@@ -1,4 +1,4 @@
-package com.info.dgpaysmusicapi_v6;
+package com.info.dgpaysmusicapi_v6.mediaPlayer;
 
 import android.content.Context;
 import android.media.AudioManager;
@@ -12,7 +12,6 @@ public class MyMediaPlayer extends AppCompatActivity {
     MediaPlayer mediaPlayer = new MediaPlayer();
 
     private static MyMediaPlayer Instance;
-    //String music = (String) getIntent().getSerializableExtra("key");
 
 
     public static MyMediaPlayer getMediaPlayerInstance() {
@@ -49,7 +48,6 @@ public class MyMediaPlayer extends AppCompatActivity {
     void pauseAudioFile(){
         mediaPlayer.pause();
     }
-    //mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
 
 
 }

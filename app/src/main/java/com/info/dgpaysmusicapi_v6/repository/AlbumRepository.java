@@ -17,11 +17,11 @@ import retrofit2.Response;
 public class AlbumRepository {
 
     private static final String TAG = AlbumRepository.class.getSimpleName();
-    private final ApiRequest apiRequest;
+    private  ApiRequest apiRequest;
 
      @Inject
-    public AlbumRepository(){
-        apiRequest = RetrofitRequest.getRetrofitInstance().create(ApiRequest.class);
+    public AlbumRepository(ApiRequest apiRequest){
+         this.apiRequest=apiRequest;
     }
 
     public LiveData<AlbumResponse> AlbumResponse() {

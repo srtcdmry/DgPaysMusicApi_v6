@@ -12,9 +12,8 @@ import android.view.View;
 
 import com.info.dgpaysmusicapi_v6.adapter.ArticleAdapter;
 import com.info.dgpaysmusicapi_v6.databinding.ActivityArticleBinding;
-import com.info.dgpaysmusicapi_v6.databinding.ActivityTrackBinding;
 import com.info.dgpaysmusicapi_v6.model.Article;
-import com.info.dgpaysmusicapi_v6.view_model.ArticleViewModel;
+import com.info.dgpaysmusicapi_v6.viewModel.ArticleViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -66,7 +65,6 @@ public class ArticleActivity extends AppCompatActivity implements ArticleAdapter
         Intent intent = new Intent(ArticleActivity.this,PlayListArtistActivity.class);
         String key = article.getName();
         String link = article.getLink();
-        //Toast.makeText(this, key, Toast.LENGTH_LONG).show();
         intent.putExtra("name",key);
         intent.putExtra("link",link);
         String picture = article.getPicture_medium();

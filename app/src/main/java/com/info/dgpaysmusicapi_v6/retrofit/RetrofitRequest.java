@@ -7,20 +7,21 @@ import javax.inject.Singleton;
 import dagger.Module;
 import dagger.Provides;
 import dagger.hilt.InstallIn;
-import dagger.hilt.components.SingletonComponent;
+import dagger.hilt.android.components.ApplicationComponent;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 @Module
-@InstallIn(SingletonComponent.class)
+@InstallIn(ApplicationComponent.class)
 public class RetrofitRequest {
 
 
     @Provides
     @Singleton
-    public static Retrofit getRetrofitInstance(){
+    public static ApiRequest provideApiRequest(){
             return new Retrofit.Builder()
                     .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
-                    .build();
+                    .build()
+                    .create(ApiRequest.class);
     }
 }

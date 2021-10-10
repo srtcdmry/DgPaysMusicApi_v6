@@ -17,11 +17,11 @@ import retrofit2.Response;
 public class TrackRepository {
 
     private static final String TAG = TrackRepository.class.getSimpleName();
-    private final ApiRequest apiRequest;
+    private  ApiRequest apiRequest;
 
     @Inject
-    public TrackRepository(){
-        apiRequest = RetrofitRequest.getRetrofitInstance().create(ApiRequest.class);
+    public TrackRepository(ApiRequest apiRequest){
+        this.apiRequest=apiRequest;
     }
 
     public LiveData<TrackResponse> TrackResponse() {
